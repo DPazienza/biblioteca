@@ -8,7 +8,6 @@ public class Main {
 		Scanner input = new Scanner(System.in);
 		//Libro libro1 = new Libro();
 		//Libro libro2 = new Libro();
-		Libro libro = new Libro();
 		
 		
 		
@@ -17,11 +16,13 @@ public class Main {
 		
 		for(int i = 0; i < n; i++) {
 			
+			Libro libro = new Libro();
+			
 			System.out.println("inserisci il codice del libro");
 			libro.setCodice(i+1);
 			
 			System.out.println("inserisci il nome del libro");
-			libro.setNome("libro" + i+1);
+			libro.setNome("libro" + (i+1));
 			
 			biblioteca.setLibro(libro);
 			

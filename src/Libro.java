@@ -2,6 +2,9 @@ import java.io.Serializable;
 
 public class Libro implements Serializable{
 
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	private int codice = 0;
 	private String nome;

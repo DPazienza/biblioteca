@@ -16,8 +16,11 @@ public class Biblioteca implements Serializable{
 
 
 	public void setLibro(Libro libro) {
-
-		scaffale.add(libro);
+		
+		Libro lib = new Libro();
+		lib = libro;
+		
+		scaffale.add(lib);
 	}
 	
 	public void getLibro(int i) {
