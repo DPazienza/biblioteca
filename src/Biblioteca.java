@@ -4,23 +4,27 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class Biblioteca {
+public class Biblioteca implements Serializable{
 
+	private static final long serialVersionUID = 1L;
 	private ArrayList<Libro> scaffale = new ArrayList<Libro>();
 
 
 
 	public void setLibro(Libro libro) {
 
-		scaffale.add(libro);
-
+		scaffale.add(scaffale.size(), libro);
 	}
-	
+
+
 
 	public void getList(){
+
+		System.out.println("numero libri :" + scaffale.size() + "\n");
 
 		for(int i = 0; i < scaffale.size(); i++ ) {
 			System.out.println(scaffale.get(i));
@@ -37,7 +41,7 @@ public class Biblioteca {
 
 	}
 
-	
+
 	public void chargeList() throws ClassNotFoundException, IOException {
 		scaffale = new ArrayList<Libro>();
 		FileInputStream file = new FileInputStream(new File("Biblioteca.ser"));

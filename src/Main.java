@@ -21,6 +21,10 @@ public class Main {
 			libro.setNome(input.next());
 			
 			biblioteca.setLibro(libro);
+			System.out.println("stampa libro" + libro);
+			System.out.println("stampa di prova della biblioteca n."+ i+1 + "\n");
+			biblioteca.getList();
+			
 			
 			
 		}
