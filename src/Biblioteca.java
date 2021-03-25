@@ -17,7 +17,11 @@ public class Biblioteca implements Serializable{
 
 	public void setLibro(Libro libro) {
 
-		scaffale.add(scaffale.size(), libro);
+		scaffale.add(libro);
+	}
+	
+	public void getLibro(int i) {
+		System.out.println(scaffale.get(i));
 	}
 
 
@@ -42,6 +46,7 @@ public class Biblioteca implements Serializable{
 	}
 
 
+	@SuppressWarnings("unchecked")
 	public void chargeList() throws ClassNotFoundException, IOException {
 		scaffale = new ArrayList<Libro>();
 		FileInputStream file = new FileInputStream(new File("Biblioteca.ser"));

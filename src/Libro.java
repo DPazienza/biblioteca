@@ -4,48 +4,48 @@ public class Libro implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private int codice = 0;
-	 private String nome;
-    private boolean disponibilita = true;
-   
-
-    public Libro() {
-    	
-    }
-    
-    public Libro(int cod,String n)
-    {
-        nome=n;
-        codice = cod;
-    }
+	private String nome;
+	private boolean disponibilita = true;
 
 
-    public int getCodice() {
-        return codice;
-    }
+	public Libro() {
 
-    public Libro setCodice(int codice) {
-        this.codice = codice;
-        return null;
-    }
+	}
 
-    public boolean isDisponibilita() {
-        return disponibilita;
-    }
+	public Libro(int cod,String n)
+	{
+		nome=n;
+		codice = cod;
+	}
 
-    public void setDisponibilita() {
-        disponibilita = false;
-    }
 
-    public String getNome() {
-        return nome;
-    }
+	public int getCodice() {
+		return codice;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public Libro setCodice(int codice) {
+		this.codice = codice;
+		return null;
+	}
 
-    public String toString(){
-        return "Codice : "+getCodice()+"\nNome : "+getNome();
-    }
+	public boolean isDisponibilita() {
+		return disponibilita;
+	}
+
+	public void setDisponibilita() {
+		disponibilita = false;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String toString(){
+		return "Codice : "+getCodice()+"\nNome : "+getNome();
+	}
 
 }
